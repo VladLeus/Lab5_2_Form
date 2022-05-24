@@ -15,6 +15,7 @@ namespace Lab5_2_Form
 
         public void Draw()
         {
+            g.Clear(Color.White);
             Point[] parallelogram =
             {
                 new Point(100, 100), new Point(160, 100), new Point(210, 100), new Point(220, 110), new Point(240, 130), new Point(250, 140), new Point(190, 140),

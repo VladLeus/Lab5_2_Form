@@ -29,12 +29,17 @@ namespace Lab5_2_Form
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Block1 = new System.Windows.Forms.Button();
             this.Canvas = new System.Windows.Forms.PictureBox();
             this.Block2 = new System.Windows.Forms.Button();
             this.Block3 = new System.Windows.Forms.Button();
             this.Block4 = new System.Windows.Forms.Button();
+            this.FPSnumeric = new System.Windows.Forms.NumericUpDown();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPSnumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // Block1
@@ -85,11 +90,33 @@ namespace Lab5_2_Form
             this.Block4.UseVisualStyleBackColor = true;
             this.Block4.Click += new System.EventHandler(this.Block4_Click);
             // 
+            // FPSnumeric
+            // 
+            this.FPSnumeric.Location = new System.Drawing.Point(663, 179);
+            this.FPSnumeric.Name = "FPSnumeric";
+            this.FPSnumeric.Size = new System.Drawing.Size(120, 23);
+            this.FPSnumeric.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(789, 181);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "FPS";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 520);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FPSnumeric);
             this.Controls.Add(this.Block4);
             this.Controls.Add(this.Block3);
             this.Controls.Add(this.Block2);
@@ -98,7 +125,9 @@ namespace Lab5_2_Form
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPSnumeric)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,6 +138,9 @@ namespace Lab5_2_Form
         internal System.Windows.Forms.Button Block2;
         internal System.Windows.Forms.Button Block3;
         internal System.Windows.Forms.Button Block4;
+        private System.Windows.Forms.NumericUpDown FPSnumeric;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -17,12 +17,14 @@ namespace Lab5_2_Form
         public Graphics g;
         public Bitmap bitmap;
         Block1 block1;
+        Block2 block2;
         public Form1()
         {
             InitializeComponent();
             bitmap = new Bitmap(Canvas.Width, Canvas.Height);
             g = Graphics.FromImage(bitmap);
             block1 = new Block1(g, pen);
+            block2 = new Block2(g, pen);
         }
 
         private void Block1_Click(object sender, EventArgs e)
@@ -33,7 +35,8 @@ namespace Lab5_2_Form
 
         private void Block2_Click(object sender, EventArgs e)
         {
-            g = Canvas.CreateGraphics();
+            Canvas.Image = bitmap;
+            block2.Draw();
         }
 
         private void Block3_Click(object sender, EventArgs e)
@@ -45,5 +48,6 @@ namespace Lab5_2_Form
         {
             g = Canvas.CreateGraphics();
         }
+
     }
 }
