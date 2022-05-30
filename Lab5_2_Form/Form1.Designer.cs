@@ -49,6 +49,7 @@ namespace Lab5_2_Form
             this.x_period = new System.Windows.Forms.Label();
             this.y_period = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FPSnumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -250,6 +251,10 @@ namespace Lab5_2_Form
             this.label4.TabIndex = 17;
             this.label4.Text = "Enter ur parameters for changing the ball\'s moves";
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -307,6 +312,7 @@ namespace Lab5_2_Form
         private System.Windows.Forms.Label x_period;
         private System.Windows.Forms.Label y_period;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
