@@ -50,6 +50,7 @@ namespace Lab5_2_Form
             this.y_period = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FPSnumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -148,7 +149,7 @@ namespace Lab5_2_Form
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(658, 295);
+            this.label3.Location = new System.Drawing.Point(658, 326);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 8;
@@ -247,19 +248,29 @@ namespace Lab5_2_Form
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(757, 408);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(269, 15);
+            this.label4.Size = new System.Drawing.Size(292, 15);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Enter ur parameters for changing the ball\'s moves";
+            this.label4.Text = "Enter ur parameters for changing the ball\'s movement";
             // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(799, 277);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 15);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "This fields are using for Block3";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 606);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.y_period);
             this.Controls.Add(this.x_period);
@@ -313,6 +324,7 @@ namespace Lab5_2_Form
         private System.Windows.Forms.Label y_period;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label5;
     }
 }
 
