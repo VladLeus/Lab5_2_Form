@@ -65,8 +65,8 @@ namespace Lab5_2_Form
             Point[] triangemid10 = { new Point(310, 130), new Point(330, 150), new Point(310, 170) };
             Point[] triangemid11 = { new Point(360, 130), new Point(340, 150), new Point(360, 170) };
             Point[] triangemid12 = { new Point(370, 130), new Point(390, 150), new Point(370, 170) };
-            SolidBrush crosshair = new SolidBrush(Color.DarkRed);
-            SolidBrush triangle = new SolidBrush(Color.DarkBlue);
+            SolidBrush crosshair = new SolidBrush(Color.Red);
+            SolidBrush triangle = new SolidBrush(Color.Black);
             SolidBrush triangleMid = new SolidBrush(Color.Gold);
             g.FillPolygon(triangle, triangleUp);
             g.FillPolygon(triangle, triangleUp1);

@@ -44,6 +44,11 @@ namespace Lab5_2_Form
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.x_factor = new System.Windows.Forms.Label();
+            this.y_factor = new System.Windows.Forms.Label();
+            this.x_period = new System.Windows.Forms.Label();
+            this.y_period = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FPSnumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -103,13 +108,22 @@ namespace Lab5_2_Form
             // FPSnumeric
             // 
             this.FPSnumeric.Location = new System.Drawing.Point(663, 179);
+            this.FPSnumeric.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.FPSnumeric.Name = "FPSnumeric";
             this.FPSnumeric.Size = new System.Drawing.Size(120, 23);
             this.FPSnumeric.TabIndex = 5;
+            this.FPSnumeric.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
@@ -145,6 +159,12 @@ namespace Lab5_2_Form
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -152,6 +172,12 @@ namespace Lab5_2_Form
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown2.TabIndex = 10;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown3
             // 
@@ -159,6 +185,12 @@ namespace Lab5_2_Form
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown3.TabIndex = 11;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown4
             // 
@@ -166,12 +198,68 @@ namespace Lab5_2_Form
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown4.TabIndex = 12;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
+            // x_factor
+            // 
+            this.x_factor.AutoSize = true;
+            this.x_factor.Location = new System.Drawing.Point(946, 297);
+            this.x_factor.Name = "x_factor";
+            this.x_factor.Size = new System.Drawing.Size(49, 15);
+            this.x_factor.TabIndex = 13;
+            this.x_factor.Text = "x_factor";
+            // 
+            // y_factor
+            // 
+            this.y_factor.AutoSize = true;
+            this.y_factor.Location = new System.Drawing.Point(946, 326);
+            this.y_factor.Name = "y_factor";
+            this.y_factor.Size = new System.Drawing.Size(49, 15);
+            this.y_factor.TabIndex = 14;
+            this.y_factor.Text = "y_factor";
+            // 
+            // x_period
+            // 
+            this.x_period.AutoSize = true;
+            this.x_period.Location = new System.Drawing.Point(946, 355);
+            this.x_period.Name = "x_period";
+            this.x_period.Size = new System.Drawing.Size(52, 15);
+            this.x_period.TabIndex = 15;
+            this.x_period.Text = "x_period";
+            // 
+            // y_period
+            // 
+            this.y_period.AutoSize = true;
+            this.y_period.Location = new System.Drawing.Point(946, 384);
+            this.y_period.Name = "y_period";
+            this.y_period.Size = new System.Drawing.Size(52, 15);
+            this.y_period.TabIndex = 16;
+            this.y_period.Text = "y_peroid";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(757, 408);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(269, 15);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Enter ur parameters for changing the ball\'s moves";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 606);
+            this.ClientSize = new System.Drawing.Size(1128, 606);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.y_period);
+            this.Controls.Add(this.x_period);
+            this.Controls.Add(this.y_factor);
+            this.Controls.Add(this.x_factor);
             this.Controls.Add(this.numericUpDown4);
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.numericUpDown2);
@@ -214,6 +302,11 @@ namespace Lab5_2_Form
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.Label x_factor;
+        private System.Windows.Forms.Label y_factor;
+        private System.Windows.Forms.Label x_period;
+        private System.Windows.Forms.Label y_period;
+        private System.Windows.Forms.Label label4;
     }
 }
 

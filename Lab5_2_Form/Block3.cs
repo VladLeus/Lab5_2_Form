@@ -30,7 +30,6 @@ namespace Lab5_2_Form
             this.height = height;
             this.width = width;
             radius = r.Next(50, 100);
-            g.TranslateTransform(width / 2, height / 2);
             x_factor = 32;
             y_factor = 32;
             x_period = 32;

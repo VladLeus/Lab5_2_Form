@@ -7,10 +7,14 @@ namespace Lab5_2_Form
     {
         Graphics g;
         Pen pen;
-        public Block1(Graphics g, Pen pen)
+        int h;
+        int w;
+        public Block1(Graphics g, Pen pen, int h, int w)
         {
             this.g = g;
             this.pen = pen;
+            this.h = h;
+            this.w = w;
         }
 
         public void Draw()
@@ -33,7 +37,7 @@ namespace Lab5_2_Form
             g.FillPolygon(paral, parallelogram);
             g.DrawPolygon(pen, trapezoid);
             g.DrawEllipse(pen, r);
-            g.FillPie(rectan, rec, 0, 137);
+            g.FillPie(rectan, rec, 0, 243);
         }
     }
 }

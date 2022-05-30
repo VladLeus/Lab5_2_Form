@@ -27,25 +27,34 @@ namespace Lab5_2_Form
             bitmap = new Bitmap(Canvas.Width, Canvas.Height);
             g = Graphics.FromImage(bitmap);
             swTimeSinceStart = new Stopwatch();
-            block1 = new Block1(g, pen);
+            block1 = new Block1(g, pen, Canvas.Height, Canvas.Width);
             block2 = new Block2(g, pen);
             block3 = new Block3(g, Canvas.Height, Canvas.Width);
         }
 
-        private void Block1_Click(object sender, EventArgs e)
+        public void Block1_Click(object sender, EventArgs e)
         {
+            timer1.Stop();       //коли після запуску 3 блоку, потрібно запустити цей
             Canvas.Image = bitmap;
+            g.ResetTransform();
             block1.Draw();
+            
         }
 
         private void Block2_Click(object sender, EventArgs e)
         {
+            timer1.Stop();       //коли після запуску 3 блоку, потрібно запустити цей
             Canvas.Image = bitmap;
+            g.ResetTransform();
             block2.Draw();
         }
 
         private void Block3_Click(object sender, EventArgs e)
         {
+            g.ResetTransform();
+            int height = Canvas.Height;
+            int width = Canvas.Width;
+            g.TranslateTransform(width / 2, height / 2);
             swTimeSinceStart.Restart();
             timer1.Interval = Convert.ToInt32(Math.Round(1000 / FPSnumeric.Value));
             frameSinceStart = 0;
@@ -67,6 +76,7 @@ namespace Lab5_2_Form
             label3.Text = $"LCM {block3.LCM}\nx_center {block3.x_center}\ny_center {block3.y_center}\nx_factor {block3.x_factor}\ny_factor {block3.y_factor}";
             block3.Animate();
         }
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             block3.x_factor = (int)numericUpDown1.Value;
