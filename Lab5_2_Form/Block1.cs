@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Lab5_2_Form
 {
@@ -9,12 +8,10 @@ namespace Lab5_2_Form
         Pen pen;
         int h;
         int w;
-        public Block1(Graphics g, Pen pen, int h, int w)
+        public Block1(Graphics g, Pen pen)
         {
             this.g = g;
             this.pen = pen;
-            this.h = h;
-            this.w = w;
         }
 
         public void Draw()

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lab5_2_Form
@@ -22,15 +15,14 @@ namespace Lab5_2_Form
         Block1 block1;
         Block2 block2;
         Block3 block3;
-        Block4 block4; 
-        bool a;
+        Block4 block4;
         public Form1()
         {
             InitializeComponent();
             bitmap = new Bitmap(Canvas.Width, Canvas.Height);
             g = Graphics.FromImage(bitmap);
             swTimeSinceStart = new Stopwatch();
-            block1 = new Block1(g, pen, Canvas.Height, Canvas.Width);
+            block1 = new Block1(g, pen);
             block2 = new Block2(g, pen);
             block3 = new Block3(g, Canvas.Height, Canvas.Width);
             block4 = new Block4(g, pen);
